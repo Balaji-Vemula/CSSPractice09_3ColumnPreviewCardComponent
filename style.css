@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap');
+:root {
+
+    /* Primary */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+
+    /* Neutral */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+    font-family: "Lexend Deca", sans-serif;
+    line-height: 30px;
+
+}
+
+p {
+    font-size: .9375rem !important;
+    color: var(--Transparent-white);
+}
+h1 {
+    font-family: "Big Shoulders Display","Lexend Deca", sans-serif;
+    color: var(--Very-light-gray);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    min-height: 100dvh;
+}
+
+.card-container {
+    max-width: 58em;
+}
+
+.card-container * {
+    flex-basis: 100%;
+}
+
+.card{
+    /* max-width: 19rem; */
+    padding: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    flex-direction: column;
+}
+
+.sedans {
+    background-color: var(--Bright-orange);
+    border-radius: .5rem 0 0 .5rem;
+}
+.sedans button {
+    color: var(--Bright-orange);
+}
+
+.suvs {
+    background-color: var(--Dark-cyan);
+}
+
+.suvs button {
+    color: var(--Dark-cyan);
+}
+
+.luxury{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+button {
+    background-color: var(--Very-light-gray);
+    margin-top: 3rem;
+    border: 0;
+    padding: .75rem 2rem;
+    border-radius: 2rem;
+}
+
+
+/* media query */
+@media (max-width: 950px) {
+    .card-container {
+        flex-direction: column;
+        margin: 3rem 2rem;
+    }
+
+    .sedans {
+        border-radius: .5rem 0.5rem 0 0;
+    }
+    .luxury{
+        border-radius: 0 0 .5rem .5rem;
+    }
+}
